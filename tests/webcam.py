@@ -15,7 +15,7 @@ def generateModel():
     model = load_model('image300M', device=device)
     diffusion = diffusion_from_config(load_config('diffusion'))
 
-    batch_size = 1
+    batch_size = 4
     guidance_scale = 3.0
 
     image = load_image("Capture.png")
@@ -36,8 +36,8 @@ def generateModel():
             s_churn = 0,
     )
 
-    render_mode = 'nerf'
-    size = 32
+    render_mode = 'cuda'
+    size = 64
 
     cameras = create_pan_cameras(size, device)
     for i, latent in enumerate(latents):
