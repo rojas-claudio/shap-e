@@ -1,0 +1,13 @@
+Pillow
+blobfile
+clip@ git+https://github.com/openai/CLIP.git
+filelock
+fire
+humanize
+matplotlib
+numpy
+requests
+scikit-image
+scipy
+torch
+tqdm
